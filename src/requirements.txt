@@ -1,0 +1,19 @@
+dash==2.7.0
+dash-bootstrap-components==1.2.1
+dash-core-components==2.0.0
+dash-html-components==2.0.0
+dash-loading-spinners==1.0.0
+dash-table==5.0.0
+fastai==1.0.61
+huggingface-hub==0.11.1
+nltk==3.7
+python-dotenv==0.21.0
+textblob==0.17.1
+torch==1.7.1
+transformers==2.1.1
+tweepy==4.12.1
+urllib3==1.26.13
+wordcloud==1.8.1
+
+# use kaleido 0.1.0post1 to run on Windows
+# pip install --force-reinstall kaleido==0.1.0post1

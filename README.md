@@ -11,12 +11,12 @@ In this project, we developed and trained two models based on the data we collec
   Note: Due to the requirements of Twitter API, we cannot publish our tweet content datasets directly in this repository. Please use the following Google Drive link to download the datasets to run our application. It includes the datasets we use and a zip file of our application. You can download the datasets into the corresponding folders or unzip the compressed file to run our application.
   https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
 
-We have trained two models, one using log regression and the other one adpated bert model from [HuggingFace](https://github.com/huggingface/transformers).  
+We have trained two models, one using log regression and the other one adapting the BERT model from [HuggingFace](https://github.com/huggingface/transformers).  
 
-We have also presented our results using Dash APP, with following options that user can choose from:
+We have also presented our results using Dash APP, with the following options that users can choose from:
 1.  users can select the different time ranges of the tweets and view the sentimental analysis results. 
 2.  View analysis based on different countries.
-3.  How twitter users feel about vaccines in general or based on the specific brand.
+3.  How Twitter users feel about vaccines in general or based on the specific brand.
 4.  Predict user-entered information.
 
 **Team Member Contribution:**
@@ -46,11 +46,15 @@ We have also presented our results using Dash APP, with following options that u
 - Multiple Analysis based on filtered information
 - Present the results using Dash
 
-### **Source Code Overview**
-Hydrate tweet content:
+### **Implementation Documentation**
+Data Collecting Step (hydrate tweet content):
 - hydrate_tweet.ipynb
-  1. retrieve tweet content using Twitter API and tweet id
-  2. (optional) preprocess tweet content and replace emojis with meanings in text
+  This is an optional Jupyter Notebook file. We only need to run it when we want to retrieve raw data of tweet contents. It is not in the requirement to run our application. It can run python scripts to retrieve the content of tweets using Twitter API and tweet id. The legitimate source of tweet data we can find publicly will exclude the content of tweets and have a tweet id. Since we want to use the text content to train our models, we have to hydrate the tweet ids using Twitter API. It also has an optional functionality to preprocess tweet content and replace emojis with meanings in the text. 
+  This file runs the following python scripts published in the Social Media Mining Toolkit (SMMT) repository:
+    1. get_metadata.py
+    2. parse_json_lite.py
+    3. emo_unicode.py
+  It can also optionally preprocess tweet content and replace emojis with meanings in text. 
 
 Train Model and Predict:
 - twitter.py:
@@ -65,8 +69,12 @@ Train Model and Predict:
   1. use TextBlob API to analyse text subjectivity
   2. compare result from TextBlob sentiment analyser with COVID-19 specialized model
 - bertmodel.ipynb:
-  1. preprocessed data
-  2. configured customer transformer model, tokenizer to adpat fastai
+  1. preprocess data
+  2. configure customer transformer model, tokenizer to adpat fastai
+
+Data Visualization:
+- dashapp.py
+  This file builds the local front end. We initially planned to build an application with both a back end and a front end. However, later we found that it was not necessary to have a back end because all our functionality can be done in the front end.
 
 ### **Running the project**
 *Optional: using conda to create an environment for this project*
@@ -80,7 +88,8 @@ git clone https://github.com/FanZang-Allen/COVID-SENTIMENT.git
 ```
   Or you can download the project with datasets here:
     https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
-Then install requirements using 
+
+Install requirements using 
 ```
 pip install -r requirements.txt
 ```

@@ -58,7 +58,7 @@ app.layout = html.Div([
                 html.Div([
                     epi_button
                 ], style={'display': 'flex', 'flex-direction': 'row', 'justify-content': 'center', 'width': '100%', 'margin': '0 auto'}),
-                dcc.Loading(id = "loading-icon", children=[epi_hist_graph, epi_pos_graph, epi_neu_graph, epi_neg_graph], type="default"),
+                dcc.Loading(id = "loading-icon1", children=[epi_hist_graph, epi_pos_graph, epi_neu_graph, epi_neg_graph], type="default"),
                 # epi_hist_graph,
                 # epi_pos_graph,
                 # epi_neu_graph,
@@ -77,7 +77,7 @@ app.layout = html.Div([
                         style = {'width': '200px', 'textAlign': 'center', 'position': 'relative', 'justify-content': 'center'},
                     ),
                     style={'display': 'flex', 'flex-direction': 'row', 'justify-content': 'center', 'width': '100%', 'margin': '0 auto'}),
-                dcc.Loading(id = "loading-icon", children=[html.Div(dcc.Graph(id='geo-graph'))], type="default"),
+                dcc.Loading(id = "loading-icon2", children=[html.Div(dcc.Graph(id='geo-graph'))], type="default"),
             ])
         ]),
         dcc.Tab(label='Vaccine', value='vaccine-tab', children=[
@@ -101,7 +101,7 @@ app.layout = html.Div([
                     style = {'width': '200px', 'textAlign': 'center', 'position': 'relative', 'justify-content': 'center'},
                 ), style={'display': 'flex', 'flex-direction': 'row', 'justify-content': 'center', 'width': '100%', 'margin': '0 auto'}),
             ]),
-            dcc.Loading(id = "loading-icon", 
+            dcc.Loading(id = "loading-icon3", 
                 children=[html.Div(dcc.Graph(id='vaccine-graph'))], type="default")
         ]),
         dcc.Tab(label='Predict', value='predict-tab', children=[

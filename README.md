@@ -7,7 +7,8 @@
 The purpose of this project is to generate a sentimental analysis of tweets that are related to Covid-19. Our goal is to use data that we collect online to train a well-performed model and use the trained model for analyzing the sentiment (i.e., negative, neutral, and positive) of Twitter users towards Covid-19 and vaccines. 
 
 In this project, we developed and trained two models based on the data we collected from Twitter using Tweepy and online datasets. We have collected over 4,800,000 tweets from 07/26/2020 to 06/25/2022 and manually labeled over 3000 tweets (a random sample of 10 tweets per day for 300 days) pulled using Twitter API. We defined keywords including ["Covid", "Vaccine"] and pulled tweets that mention the keywords. The analysis adapted an online dataset that includes more than 50k tweets as well.
-  Note: Due to the requirements of Twitter API, we cannot publish our tweet content datasets directly in this repository. Please use the following Google Drive link to download the datasets to run our application.
+  
+  Note: Due to the requirements of Twitter API, we cannot publish our tweet content datasets directly in this repository. Please use the following Google Drive link to download the datasets to run our application. It includes the datasets we use and a zip file of our application. You can download the datasets into the corresponding folders or unzip the compressed file to run our application.
   https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
 
 We have trained two models, one using log regression and the other one adpated bert model from [HuggingFace](https://github.com/huggingface/transformers).  
@@ -72,10 +73,13 @@ Train Model and Predict:
 ```
 conda create -n py39 python=3.9
 ```
-First clone the project on local environment
+First clone the project to local environment. 
+  Note: you will have to download the datasets separately and load them to the corresponding folders.
 ```
 git clone https://github.com/FanZang-Allen/COVID-SENTIMENT.git
 ```
+  Or you can download the project with datasets here:
+    https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
 Then install requirements using 
 ```
 pip install -r requirements.txt

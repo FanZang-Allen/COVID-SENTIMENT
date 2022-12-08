@@ -80,7 +80,8 @@ git clone https://github.com/FanZang-Allen/COVID-SENTIMENT.git
 ```
   Or you can download the project with datasets here:
     https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
-Then install requirements using 
+
+Install requirements using 
 ```
 pip install -r requirements.txt
 ```

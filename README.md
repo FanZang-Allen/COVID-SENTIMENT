@@ -8,7 +8,8 @@ The purpose of this project is to generate a sentimental analysis of tweets that
 
 In this project, we developed and trained two models based on the data we collected from Twitter using Tweepy and online datasets. We have collected over 4,800,000 tweets from 07/26/2020 to 06/25/2022 and manually labeled over 3000 tweets (a random sample of 10 tweets per day for 300 days) pulled using Twitter API. We defined keywords including ["Covid", "Vaccine"] and pulled tweets that mention the keywords. The analysis adapted an online dataset that includes more than 50k tweets as well.
   
-  Note: Due to the requirements of Twitter API, we cannot publish our tweet content datasets directly in this repository. Please use the following Google Drive link to download the datasets to run our application. It includes the datasets we use and a zip file of our application. You can download the datasets into the corresponding folders or unzip the compressed file to run our application. 
+  Note: Due to the requirements of Twitter API, we cannot publish our tweet content datasets directly in this repository. Please use the following Google Drive link to download the datasets to run our application. It includes the datasets we use and a zip file of our application. You can download the datasets into the corresponding folders or unzip the compressed file to run our application.  
+  
   You can also download the <b>demo video</b> following this link:
   https://drive.google.com/drive/folders/1WkHKEbWaAFimRCzSoXpZqBTbuUxJAmpH?usp=sharing
 
